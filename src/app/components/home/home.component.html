@@ -1,0 +1,13 @@
+<div *ngIf='nuevasCanciones.length == 0 && !error'>
+  <app-loading></app-loading>
+</div>
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+  <h3>Error</h3>
+  <p>
+    {{mensajeErr}}
+  </p>
+</div>
+
+<app-card [items] = 'nuevasCanciones'></app-card>
+
